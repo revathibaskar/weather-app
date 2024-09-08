@@ -52,7 +52,8 @@ const CityWeather = () => {
     fetchWeather();
   }, [cityName]);
 
-  if (loading) return <TailSpin
+  if (loading) return <div className='flex justify-center items-center h-full'>
+   <TailSpin
   visible={true}
   height="80"
   width="80"
@@ -62,6 +63,7 @@ const CityWeather = () => {
   wrapperStyle={{}}
   wrapperClass=""
   />
+  </div>
   if (error) return <div className='flex justify-center items-center h-full'>
     <p className='text-center text-3xl'>{error}</p>
     </div>;
